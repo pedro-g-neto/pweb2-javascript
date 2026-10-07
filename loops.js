@@ -9,3 +9,12 @@ const object ={
     age: 20,
     city: "João Pessoa"
 }
+
+for (key in object){
+    console.log(object[key]);
+}
+
+const array = ['hb20', 'hilux', 'corolla']
+for (item of array){
+    console.log(item)
+}

@@ -9,8 +9,26 @@ const saudarArrow = (nome='visitante') => { // Também é possível guardar a fu
     return `Olá ${nome}`;
 }
 const potenciaArrow = (base,exp) => base**exp; // Retorno implícito quando é uma função simples
-saudar();
-console.log(potencia(5,2));
-console.log(potencia(4,3));
-console.log(saudarArrow());
-console.log(saudarArrow("Pedro"));
+
+function teste(nome){
+    console.log("function declaration", nome)
+}
+
+const testeExp = function(){
+    console.log("function expression")
+}
+
+const testeArrow = (nome) => {
+    console.log("Arrow function",nome)
+}
+/*
+------- Factory Function ---------
+*/
+// Essa função retorna um objeto quando executada
+const factoryFunction = (name) =>{
+    return {
+        logou: () => alert(`O usuário ${nome} logou`),
+        deslogou: () => alert(`O usuário ${nome} deslogou`),
+    }
+}
+factoryFunction('Pedro').logou()
